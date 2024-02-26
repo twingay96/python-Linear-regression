@@ -32,6 +32,8 @@ for iteration in range(n_iterations):
     wGD = wGD - eta*gradients
     # 매번 gradient된 결과를 하나씩 iteration갯수에 따라서 넣는 것
     #wGDbuffer[:,iteration+1] = [wGD[0], wGD[1]]
+    wGDbuffer[0, iteration+1] = wGD[0]
+    wGDbuffer[1, iteration+1] = wGD[1]
     
 print(sigmoid(3))
 xxTest = np.linspace(0,10,num = N).reshape(N,1)
